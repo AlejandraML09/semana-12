@@ -1,0 +1,30 @@
+.principal-section {
+    margin-bottom: 4em;
+    font-size: 1.5em;
+    margin: 1em auto;
+    text-align: center;
+}
+
+.article-container {
+    text-align: center;
+}
+
+.section {
+    line-height: 1.5em;
+
+    &--first {
+        background-image: url("imagenes/fondo6.jpg");
+        background-size: cover;
+        padding: 2em;
+        text-align: left;
+        margin: 1em auto;
+        flex-wrap: wrap;
+    }
+    &--second {
+        margin: 1em auto;
+        padding: 1em;
+    }
+    &__image-container {
+        margin: 0 auto;
+    }
+}
