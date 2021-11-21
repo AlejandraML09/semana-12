@@ -290,23 +290,28 @@
 
             var lenguajes = ["PHP", "JavaScript", "Java", "C", "Python"];
 
+            /* Consigo el div que está vacío */
             var lenguajesContainer = document.getElementById(
                 "lenguajes-container"
             );
 
+            /* Acá creo los elementos, el orden de creación no es importante pero así es más fácil para guiarse. Lo que si es importante es el orden en que se asignan uno adentro del otro. */
             var elementoUl = document.createElement("ul");
 
-            var elementoLi = document.createElement("li");
-
-            var elementoA = document.createElement("a");
-
+            /* Acá en cambio si importa el orden para la iteración */
             for (var lenguaje of lenguajes) {
-                elementoA.href = "#" + lenguajes[0].toLowerCase();
-                elementoA.innerHTML = lenguajes[0];
+                var elementoLi = document.createElement("li");
+                var elementoA = document.createElement("a");
+                /* Acá al elemento a le agrego un href que adentro va a tener un # y el primer elemento del array (en posición 0) con letra minúscula) */
+                elementoA.href = "#" + lenguaje.toLowerCase();
+                /* Luego adentro de ese elementoA (dentro de su html) le agregamos PHP (sin modificar) es lo que aparece clickeable */
+                elementoA.innerHTML = lenguaje;
+                /* Después elementoLi (que es un li) le ponemos dentro (con appendChild) al elementoA (es decir, a) */
                 elementoLi.appendChild(elementoA);
+                /* Siguiente en el elementoUL le ponemos dentro (con appendChild) al elemento Li */
                 elementoUl.appendChild(elementoLi);
             }
-
+            /* Este es el UL que queda afuera porque no se necesita reiterarlo, sólo se crea una vez */
             lenguajesContainer.appendChild(elementoUl);
         </script>
     </body>
