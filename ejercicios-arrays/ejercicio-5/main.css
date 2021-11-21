@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Patrick Hand', cursive; 
+    
+}
+
+.nav-bar{
+    background-color:rgb(231, 134, 64);   
+    font-size: 1.5em;
+    padding: .3em;
+    width: 100%;
+    height: 3em;
+    justify-content: center;  
+    align-items: center;
+}
+.nav-bar__nav-list{
+    display: flex;
+    width: 100%;   
+    
+}
+a {
+    display: inline-block;
+    width: 13em;
+    height: 2.2em;
+    text-decoration: none; 
+    color: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: space-between;
+
+}
+li {
+    list-style-type: none;
+    margin: .5em;
+}
+
+.principal-section{
+    width: 95%;
+    height: 10em;
+    font-size: 1.5em;
+    margin: 1em auto;
+    text-align: center;
+    background-image: url("imagenes/fondo1.jpg");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: repeat-x;
+    border: rgb(122, 59, 14) .5em solid;
+}
+.imagen-container{
+    width: 70%;
+    margin:0 auto;
+}
+.imagen{
+    margin: 1em;
+    width: 90%;
+    border: rgb(128, 0, 38) double;
+}
+.article-container{
+    text-align: center;
+    
+}
+.first-section{
+    background-image: url("imagenes/fondo6.jpg");
+    background-size: cover;
+    width: 60em;
+    padding: 2em;
+    text-align: left;
+    margin: 1em auto;
+    line-height: 1.5em;
+    flex-wrap: wrap;
+    font-weight: bold;
+    border: rgb(122, 59, 14) .4em solid;
+}
+.second-section{
+    width: 70%;
+    margin: 1em auto;
+    padding: 1em;
+    background-color: indianred;
+    line-height: 1.5em;
+    border: rgb(122, 59, 14) .4em solid;
+}
+.footer-container{
+    background-image: url("imagenes/black-cat.gif");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    margin: 1em auto;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    font-variant: small-caps;
+    width: 70%;
+    height: 5em;
+    background-color: salmon;
+    
+}
