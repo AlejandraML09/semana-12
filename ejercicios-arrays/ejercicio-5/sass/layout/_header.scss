@@ -6,6 +6,10 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    top: 0;
+    z-index: 1;
+    position: fixed;
+    font-weight: bold;
 
     &__nav-list {
         display: flex;
@@ -18,12 +22,18 @@
         color: rgb(0, 0, 0);
         text-align: center;
         justify-content: space-between;
+        
+        &:hover {
+            text-decoration: none;
+            color:$highlight-text-color;
+            
+        }
     }
+&__nav-item {
+    list-style-type: none;
+    margin: 0.5em;
+}
 
-    &__nav-item {
-        list-style-type: none;
-        margin: 0.5em;
-    }
 }
 
 /* Menu Hamburguesa que sólo se ve en pantallas chicas */
@@ -41,7 +51,6 @@
         text-decoration: none;
         color: #232323;
         transition: color 0.3s ease;
-        
         background-color: $highlight-color;
     }
 
@@ -58,8 +67,6 @@
         z-index: 2; /* and place it over the hamburger */
         -webkit-touch-callout: none;
     }
-
-
 
     /*
  * Just a quick hamburger
@@ -90,17 +97,16 @@
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-    input:checked ~ .hamburger-menu__three-lines-container span {
-        
+    input:checked ~ span {
         opacity: 1;
         transform: rotate(45deg) translate(-2px, -1px);
-        background: $main-text-color
+        background: $main-text-color;
     }
 
     /*
  * But let's hide the middle one.
  */
-    input:checked ~ .hamburger-menu__three-lines-container span:nth-last-child(3) {
+    input:checked ~ span:nth-last-child(3) {
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
     }
@@ -108,7 +114,7 @@
     /*
  * But let's hide the middle one.
  */
-    input:checked ~ .hamburger-menu__three-lines-container span:nth-last-child(3) {
+    input:checked ~ span:nth-last-child(3) {
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
     }
@@ -116,7 +122,7 @@
     /*
  * Oh yeah and the last one should go the other direction
  */
-    input:checked ~ .hamburger-menu__three-lines-container span:nth-last-child(2) {
+    input:checked ~ span:nth-last-child(2) {
         transform: rotate(-45deg) translate(0, -1px);
     }
 
@@ -128,12 +134,10 @@
     }
 
     .hamburger-menu__three-lines-container {
-    background-color: $highlight-color;
-    padding-bottom: 1px;
+        background-color: $highlight-color;
+        padding-bottom: 1px;
+    }
 }
-}
-
-
 
 /*
  * Make this absolute positioned
@@ -168,7 +172,8 @@
     height: 7em;
     position: fixed;
     top: 0px;
-    display:none;
+    display: none;
+    z-index: 1;
 }
 
 @media (max-width: 600px) {
@@ -184,6 +189,6 @@
         margin-top: 5em;
     }
     .hamburger-menu-navbar {
-        display:block;
+        display: block;
     }
 }

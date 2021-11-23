@@ -1,15 +1,15 @@
-.footer-container{
-    background-image: url("imagenes/black-cat.gif");
+.footer {
+    background-image: url("../imagenes/black-cat.gif");
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
-    margin: 1em auto;
+    margin: 0em auto;
     font-size: 1.5em;
     text-align: center;
     font-weight: bold;
-    font-variant: small-caps;
-    width: 70%;
-    height: 5em;
-    background-color: salmon;
-    
+    background-color: $highlight-color;
+
+    p {
+        margin-bottom: 0;
+    }
 }
