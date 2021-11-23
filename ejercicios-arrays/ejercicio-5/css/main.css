@@ -1,12 +1,17 @@
 @charset "UTF-8";
+/* Está función toma un nombre de color y nos deja usar la variable CSS con el mismo nombre (básicamente nos deja usar variables css en SASS) */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,800;1,200&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--main-text-color);
 }
 
-/* Está función toma un nombre de color y nos deja usar la variable CSS con el mismo nombre (básicamente nos deja usar variables css en SASS) */
+html body {
+  background-color: var(--background-color);
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }

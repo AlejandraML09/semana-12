@@ -1,10 +1,18 @@
+/* Está función toma un nombre de color y nos deja usar la variable CSS con el mismo nombre (básicamente nos deja usar variables css en SASS) */
+@function color($color-name) {
+    @return var(--#{$color-name});
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: color(main-text-color);
 }
 
-/* Está función toma un nombre de color y nos deja usar la variable CSS con el mismo nombre (básicamente nos deja usar variables css en SASS) */
-@function color($color-name) {
-  @return var(--#{$color-name});
+html body {
+    background-color: color(background-color);
+    
 }
+
+
