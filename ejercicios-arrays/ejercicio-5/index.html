@@ -15,30 +15,20 @@
     </head>
     <body>
         <header class="main-header">
-            <div class="hamburger-menu-navbar">
-                <div id="menuToggle">
+            <div class="hamburger-menu">
+                <div class="hamburger-menu__toggle">
                     <!--
-                    A fake / hidden checkbox is used as click reciever,
-                    so you can use the :checked selector on it.
-                    -->
+                    Este checkbox se pusa como "receptor" (como se usó en el proyecto) para que cuando se hace click en el checkbox aparece el toggle menu -->
                     <input type="checkbox" />
                     <!--
-                    Some spans to act as a hamburger.
-                    
-                    They are acting like a real hamburger,
-                    not that McDonalds stuff.
+                        Los spans son barritas de hamburguesa
                     -->
-
                     <div class="hamburger-menu__three-lines-container">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-                    <!--
-                    Too bad the menu has to be inside of the button
-                    but hey, it's pure CSS magic.
-                    -->
-                    <ul id="menu">
+                    <ul class="hamburger-menu__links">
                         <a href="#"><li>Noticias</li></a>
                         <a href="#"><li>Razas</li></a>
                         <a href="#"><li>Alimentación</li></a>

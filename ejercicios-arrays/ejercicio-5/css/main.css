@@ -79,8 +79,23 @@ body {
   margin: 0.5em;
 }
 
-/* Menu Hamburguesa que sólo se ve en pantallas chicas */
-#menuToggle {
+.hamburger-menu {
+  background-color: #e78640;
+  width: 100%;
+  height: 7em;
+  position: fixed;
+  top: 0px;
+  display: none;
+  z-index: 1;
+  /* Menu Hamburguesa que sólo se ve en pantallas chicas */
+  /* Just a quick hamburger */
+  /* Transform all the slices of hamburger into a crossmark. */
+  /* But let's hide the middle one.  */
+  /* Oh yeah and the last one should go the other direction */
+  /* And let's slide it in from the left */
+  /* Make this absolute positioned at the top left of the screen  */
+}
+.hamburger-menu__toggle {
   display: block;
   position: fixed;
   top: 50px;
@@ -92,33 +107,14 @@ body {
        user-select: none;
   display: none;
   background-color: white;
-  /*
-  * Just a quick hamburger
-  */
-  /* 
-  * Transform all the slices of hamburger
-  * into a crossmark.
-  */
-  /*
-  * But let's hide the middle one.
-  */
-  /*
-  * But let's hide the middle one.
-  */
-  /*
-  * Oh yeah and the last one should go the other direction
-  */
-  /*
-  * And let's slide it in from the left
-  */
 }
-#menuToggle a {
+.hamburger-menu__toggle a {
   text-decoration: none;
   color: #232323;
   transition: color 0.3s ease;
   background-color: #e78640;
 }
-#menuToggle input {
+.hamburger-menu__toggle input {
   display: block;
   width: 40px;
   height: 32px;
@@ -133,7 +129,11 @@ body {
   /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
-#menuToggle .hamburger-menu__three-lines-container span {
+.hamburger-menu__three-lines-container {
+  background-color: #e78640;
+  padding-bottom: 1px;
+}
+.hamburger-menu__three-lines-container span {
   display: block;
   width: 33px;
   height: 4px;
@@ -145,41 +145,28 @@ body {
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
-#menuToggle span:first-child {
+.hamburger-menu span:first-child {
   transform-origin: 0% 0%;
 }
-#menuToggle span:nth-last-child(2) {
+.hamburger-menu span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
-#menuToggle input:checked ~ span {
+.hamburger-menu input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: black;
 }
-#menuToggle input:checked ~ span:nth-last-child(3) {
+.hamburger-menu input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-#menuToggle input:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-#menuToggle input:checked ~ span:nth-last-child(2) {
+.hamburger-menu input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
-#menuToggle input:checked ~ ul {
+.hamburger-menu input:checked ~ ul {
   transform: none;
 }
-#menuToggle .hamburger-menu__three-lines-container {
-  background-color: #e78640;
-  padding-bottom: 1px;
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu {
+.hamburger-menu__links {
   position: absolute;
   width: 300px;
   margin: -100px 0 0 -50px;
@@ -193,24 +180,14 @@ body {
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
-#menu li {
+.hamburger-menu__links li {
   padding: 10px 0;
   font-size: 22px;
   color: black;
 }
 
-.hamburger-menu-navbar {
-  background-color: #e78640;
-  width: 100%;
-  height: 7em;
-  position: fixed;
-  top: 0px;
-  display: none;
-  z-index: 1;
-}
-
 @media (max-width: 600px) {
-  #menuToggle {
+  .hamburger-menu__toggle {
     display: block;
   }
 
@@ -222,7 +199,7 @@ body {
     margin-top: 5em;
   }
 
-  .hamburger-menu-navbar {
+  .hamburger-menu {
     display: block;
   }
 }
