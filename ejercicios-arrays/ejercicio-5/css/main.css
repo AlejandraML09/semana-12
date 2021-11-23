@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,800;1,200&display=swap");
 body {
   font-family: "Poppins", sans-serif;
@@ -16,6 +17,8 @@ body {
 
 .section {
   line-height: 1.5em;
+  display: flex;
+  flex-direction: column;
 }
 .section--first {
   background-image: url("imagenes/fondo6.jpg");
@@ -30,26 +33,25 @@ body {
   padding: 1em;
 }
 .section__image-container {
-  margin: 0 auto;
+  width: 100%;
 }
 
 .nav-bar {
+  display: flex;
   background-color: #e78640;
   font-size: 1.5em;
   padding: 0.3em;
   width: 100%;
-  height: 3em;
   justify-content: center;
   align-items: center;
 }
 .nav-bar__nav-list {
   display: flex;
   width: 100%;
+  justify-content: space-around;
 }
 .nav-bar__nav-link {
   display: inline-block;
-  width: 13em;
-  height: 2.2em;
   text-decoration: none;
   color: black;
   text-align: center;
@@ -60,9 +62,10 @@ body {
   margin: 0.5em;
 }
 
+/* Menu Hamburguesa que sólo se ve en pantallas chicas */
 #menuToggle {
   display: block;
-  position: relative;
+  position: fixed;
   top: 50px;
   left: 50px;
   z-index: 1;
@@ -70,23 +73,40 @@ body {
   -moz-user-select: none;
    -ms-user-select: none;
        user-select: none;
+  display: none;
+  background-color: white;
+  /*
+  * Just a quick hamburger
+  */
+  /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+  /*
+  * But let's hide the middle one.
+  */
+  /*
+  * But let's hide the middle one.
+  */
+  /*
+  * Oh yeah and the last one should go the other direction
+  */
+  /*
+  * And let's slide it in from the left
+  */
 }
-
 #menuToggle a {
   text-decoration: none;
   color: #232323;
   transition: color 0.3s ease;
+  background-color: #e78640;
 }
-
-#menuToggle a:hover {
-  color: tomato;
-}
-
 #menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
+  background-color: #e78640;
   top: -7px;
   left: -5px;
   cursor: pointer;
@@ -96,54 +116,46 @@ body {
   /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span {
+#menuToggle .hamburger-menu__three-lines-container span {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #cdcdcd;
+  background-color: black;
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
-
 #menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
-
 #menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span {
+#menuToggle input:checked ~ .hamburger-menu__three-lines-container span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: black;
 }
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3) {
+#menuToggle input:checked ~ .hamburger-menu__three-lines-container span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2) {
+#menuToggle input:checked ~ .hamburger-menu__three-lines-container span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ .hamburger-menu__three-lines-container span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
+}
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+#menuToggle .hamburger-menu__three-lines-container {
+  background-color: #e78640;
+  padding-bottom: 1px;
 }
 
 /*
@@ -156,7 +168,7 @@ body {
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  background: #ededed;
+  background: #e78640;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -164,19 +176,38 @@ body {
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
-
 #menu li {
   padding: 10px 0;
   font-size: 22px;
+  color: black;
 }
 
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul {
-  transform: none;
+.hamburger-menu-navbar {
+  background-color: #e78640;
+  width: 100%;
+  height: 7em;
+  position: fixed;
+  top: 0px;
+  display: none;
 }
 
+@media (max-width: 600px) {
+  #menuToggle {
+    display: block;
+  }
+
+  .nav-bar {
+    display: none;
+  }
+
+  .principal-section {
+    margin-top: 5em;
+  }
+
+  .hamburger-menu-navbar {
+    display: block;
+  }
+}
 * {
   margin: 0;
   padding: 0;

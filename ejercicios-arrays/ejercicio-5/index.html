@@ -9,54 +9,55 @@
     </head>
     <body>
         <header class="main-header">
-            <nav class="nav-bar">
+            <div class="hamburger-menu-navbar">
                 <div id="menuToggle">
                     <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
+                    A fake / hidden checkbox is used as click reciever,
+                    so you can use the :checked selector on it.
+                    -->
                     <input type="checkbox" />
-
                     <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
+                    Some spans to act as a hamburger.
+                    
+                    They are acting like a real hamburger,
+                    not that McDonalds stuff.
+                    -->
+                    
+                    <div class="hamburger-menu__three-lines-container">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
+                    Too bad the menu has to be inside of the button
+                    but hey, it's pure CSS magic.
+                    -->
                     <ul id="menu">
-                        <a href="#"><li>Home</li></a>
-                        <a href="#"><li>About</li></a>
-                        <a href="#"><li>Info</li></a>
-                        <a href="#"><li>Contact</li></a>
-                        <a href="https://erikterwan.com/" target="_blank"
-                            ><li>Show me more</li></a
-                        >
+                        <a href="#"><li>Noticias</li></a>
+                        <a href="#"><li>Razas</li></a>
+                        <a href="#"><li>Alimentación</li></a>
+                        <a href="#"><li>Nosotros</li></a>
+                        <a href="#"><li>Contacto</li></a>
                     </ul>
                 </div>
+            </div>
 
-                <ul id="menu" class="nav-bar__nav-list">
+            <nav class="nav-bar">
+                <ul class="nav-bar__nav-list">
                     <li class="nav-bar__nav-item">
-                        <a class="nav-bar__nav-link" href="">Noticias</a>
+                        <a class="nav-bar__nav-link" href="#">Noticias</a>
                     </li>
                     <li class="nav-bar__nav-item">
-                        <a class="nav-bar__nav-link" href="">Razas</a>
+                        <a class="nav-bar__nav-link" href="#">Razas</a>
                     </li>
                     <li class="nav-bar__nav-item">
-                        <a class="nav-bar__nav-link" href="">Alimentacion</a>
+                        <a class="nav-bar__nav-link" href="#">Alimentacion</a>
                     </li>
                     <li class="nav-bar__nav-item">
-                        <a class="nav-bar__nav-link" href="">Nosotros</a>
+                        <a class="nav-bar__nav-link" href="#">Nosotros</a>
                     </li>
                     <li class="nav-bar__nav-item">
-                        <a class="nav-bar__nav-link" href="">Contacto</a>
+                        <a class="nav-bar__nav-link" href="#">Contacto</a>
                     </li>
                 </ul>
             </nav>
