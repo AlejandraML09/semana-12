@@ -1,0 +1,16 @@
+h1{
+    background-color: burlywood;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: black;
+}
+label{
+    background-color: coral;
+}
+
+li{
+    background-color: chocolate;
+    
+}
