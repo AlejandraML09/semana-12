@@ -42,15 +42,29 @@
 
 
     <script>
-        
-        var todasLasA = document.getElementsByTagName("a")
-                     /* Contenido del Title que dice Buscar /  /* Contenido de la A, que dice"Google" */  
-        // todasLasA[0].innerHTML = todasLasA[0].title +  " en " + todasLasA[0].innerHTML  +" (" + todasLasA[0].href + ")"
-        
-        /* Este for hace una iteración y guarda todasLasA (que es como un array) adentro de unElementoA. Es como poner en el for todasLasA.length pero acá el for of se da cuenta de la longitud del array solito. Una vez que pasa por el array por primera vez, guarda esa a en unElementoA y lo repite  */
+       
+        var todasLasA = document.getElementsByTagName("a");
+
         for (var unElementoA of todasLasA) {
-            unElementoA.innerHTML = unElementoA.title +  " en " + unElementoA.innerHTML  +" (" + unElementoA.href + ")"
-        }
+                unElementoA.innerHTML =
+                    unElementoA.title +
+                    " en " +
+                    unElementoA.innerHTML +
+                    " (" +
+                    unElementoA.href +
+                    ")";
+                    +
+                    unElementoA.setAttribute("target", "blank")
+            }
+
+        // var todasLasA = document.getElementsByTagName("a")
+        //              /* Contenido del Title que dice Buscar /  /* Contenido de la A, que dice"Google" */  
+        // // todasLasA[0].innerHTML = todasLasA[0].title +  " en " + todasLasA[0].innerHTML  +" (" + todasLasA[0].href + ")"
+        
+        // /* Este for hace una iteración y guarda todasLasA (que es como un array) adentro de unElementoA. Es como poner en el for todasLasA.length pero acá el for of se da cuenta de la longitud del array solito. Una vez que pasa por el array por primera vez, guarda esa a en unElementoA y lo repite  */
+        // for (var unElementoA of todasLasA) {
+        //     unElementoA.innerHTML = unElementoA.title +  " en " + unElementoA.innerHTML  +" (" + unElementoA.href + ")" + vinculos[i].setAttribute('target', '_blank')
+        // }
         
 
     
