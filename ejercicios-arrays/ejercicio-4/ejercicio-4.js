@@ -1,5 +1,4 @@
-var container = document.createElement("div"); 
-container.innerHTML = "algo";      
+var container = document.createElement("div");       
 container.id='lenguajes-container'
 document.body.appendChild(container);  
 var i, j
