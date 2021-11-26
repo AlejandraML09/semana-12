@@ -35,7 +35,6 @@ var i, j
                     document.getElementById("Javascript").appendChild(parrafos);  
                     parrafos.style.fontSize='.7em'
                     parrafos.style.fontWeight='normal'
-                    // parrafos.addEventListener('load',lala)
                 }
             break;
             
@@ -46,7 +45,6 @@ var i, j
                     document.getElementById("Java").appendChild(parrafos); 
                     parrafos.style.fontSize='.7em'
                     parrafos.style.fontWeight='normal'
-                    // parrafos.addEventListener('load',lala)
                 }
             break;
             case 3:
@@ -72,10 +70,6 @@ var i, j
             default: console.log('entro en el else')
                 break;
         }
-
-        //     function lala(e){
-        //     e.preventDefault()
-        // }
 
     }
 
