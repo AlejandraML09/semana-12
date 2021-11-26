@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/estilos-1.css" />
+
+        <title>Afiliación</title>
+    </head>
+    <body>
+        <video class="video-de-fondo" autoplay muted loop id="myVideo">
+            <source
+                src="img/Elderly Men And Woman Practicing Yoga HD Video_1.webm"
+                type="video/mp4"
+            />
+        </video>
+        <header>
+            <h1 class="gym-title">Vení al Gym! 💪🏼</h1>
+        </header>
+        <input type="checkbox" id="styles" name="styles" />
+        <label for="styles">Estilo Personalizado</label>
+        <form action="action.html">
+            <fieldset class="personal-data-container">
+                <legend>
+                    <h2 class="data-title">🙋🏼‍♂️Datos Personales👀</h2>
+                </legend>
+                <div class="personal-data">
+                    <label for="nombre">Nombre:*</label>
+                    <input type="text" id="nombre" name="nombre" required />
+                </div>
+                <div class="personal-data">
+                    <label for="apellido">Apellido:*</label>
+                    <input type="text" id="apellido" name="apellido" required />
+                </div>
+
+                <div class="personal-data">
+                    <label for="documento">Documento:*</label>
+                    <input
+                        type="text"
+                        id="documento"
+                        name="documento"
+                        required
+                    />
+                </div>
+
+                <div class="personal-data">
+                    <label for="nacionalidad">Nacionalidad:*</label>
+                    <select name="nacionalidad" id="nacionalidad" required>
+                        <option value="">- Seleccionar -</option>
+                        <option value="1">Argentina</option>
+                        <option value="2">Brasilera</option>
+                        <option value="3">Uruguaya</option>
+                        <option value="4">Otra</option>
+                    </select>
+                </div>
+
+                <div class="personal-data">
+                    <label for="contanos">Contanos un poco de vos...:</label>
+                    <textarea
+                        maxlength="200"
+                        name="contanos"
+                        id="contanos"
+                        cols="100"
+                        rows="10"
+                    >
+                    </textarea>
+                </div>
+
+                <div class="personal-data">
+                    <label>Sexo:*</label>
+                    <div>
+                        <label tabindex="-1"
+                            ><input
+                                type="radio"
+                                name="sexo"
+                                value="sexo-femenino"
+                                required
+                            />Femenino</label
+                        >
+                        <label tabindex="-1"
+                            ><input
+                                type="radio"
+                                name="sexo"
+                                value="sexo-masculino"
+                                required
+                            />Masculino</label
+                        >
+                        <label tabindex="-1"
+                            ><input
+                                type="radio"
+                                name="sexo"
+                                value="sexo-otro"
+                                required
+                            />Otro</label
+                        >
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="separador"></div>
+
+            <fieldset
+                class="personal-data-container"
+                id="datos-de-contacto-form"
+            >
+                <legend>
+                    <h2 class="data-title">📱Datos de Contacto📧</h2>
+                </legend>
+                <div class="personal-data">
+                    <label for="telefono">Teléfono:</label>
+                    <input
+                        class="placeholder-right"
+                        type="number"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="Código de área y número"
+                    />
+                </div>
+                <div class="personal-data">
+                    <label for="email">Dirección de correo electrónico:*</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Ej: mail@gmail.com"
+                        required
+                    />
+                </div>
+            </fieldset>
+
+            <div class="separador"></div>
+            <fieldset class="actividades-container">
+                <legend><h2 class="data-title">🚴Actividades🤸🏼‍♂️</h2></legend>
+                <p>Por favor indica cuáles actividades te interesan.</p>
+                <label class="sedes-label">Sede Palermo:</label>
+                <div class="sedes-margin">
+                    <input
+                        type="checkbox"
+                        id="basquet-palermo"
+                        name="basquet-palermo"
+                        value="basquet-palermo"
+                    />
+                    <label for="basquet-palermo">Básquet</label>
+                    <input
+                        type="checkbox"
+                        id="boxeo-palermo"
+                        name="boxeo-palermo"
+                        value="boxeo-palermo"
+                    />
+                    <label for="boxeo-palermo">Boxeo</label>
+                    <input
+                        type="checkbox"
+                        id="futbol-palermo"
+                        name="futbol-palermo"
+                        value="futbol-palermo"
+                    />
+                    <label for="futbol-palermo">Fútbol</label>
+                    <input
+                        type="checkbox"
+                        id="tenis-palermo"
+                        name="tenis-palermo"
+                        value="tenis-palermo"
+                    />
+                    <label for="tenis-palermo">Tenis</label>
+                </div>
+                <label class="sedes-label">Sede Rosario:</label>
+                <div class="sedes-margin">
+                    <input
+                        type="checkbox"
+                        id="basquet-rosario"
+                        name="basquet-rosario"
+                        value="basquet-rosario"
+                    />
+                    <label for="basquet-rosario">Básquet</label>
+                    <input
+                        type="checkbox"
+                        id="futbol-rosario"
+                        name="futbol-rosario"
+                        value="futbol-rosario"
+                    />
+                    <label for="futbol-rosario">Fútbol</label>
+                    <input
+                        type="checkbox"
+                        id="rugby-rosario"
+                        name="rugby-rosario"
+                        value="rugby-rosario"
+                    />
+                    <label for="rugby-rosario">Rugby</label>
+                    <input
+                        type="checkbox"
+                        id="voley-rosario"
+                        name="voley-rosario"
+                        value="voley-rosario"
+                    />
+                    <label for="voley-rosario">Voley</label>
+                </div>
+            </fieldset>
+
+            <div class="tos-news">
+                <div class="checkbox-margin">
+                    <input
+                        type="checkbox"
+                        id="conditions"
+                        name="condiciones"
+                        value="conditions"
+                        required
+                    />
+                    <label for="conditions">Acepto las condiciones*</label>
+                </div>
+                <div>
+                    <input
+                        type="checkbox"
+                        id="news"
+                        name="novedades"
+                        value="news"
+                        checked
+                        required
+                    />
+                    <label for="news">Deseo recibir novedades</label>
+                </div>
+            </div>
+            <p class="tos-news">*:campo obligatorio.</p>
+            <div class="btn-container">
+                <button class="btn">Iniciar afiliación</button>
+                <button class="btn" type="reset">Restablecer</button>
+            </div>
+        </form>
+    </body>
+    <script src="./js/checkbox.js"></script>
+</html>
