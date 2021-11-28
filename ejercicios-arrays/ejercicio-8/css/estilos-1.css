@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    background-color: #1f2023;
+    font-family: "Roboto", sans-serif;
+    min-width: 50%;
+    max-width: 750px;
+    margin: auto;
+}
+
+header {
+    margin: 50px 0px;
+}
+
+/* Título que dice Vení al Gym */
+
+.gym-title {
+    color: white;
+    border-top: 20px solid #4d6d63;
+    border-bottom: 20px solid #4d6d63;
+    border-left: 20px solid #1f2023;
+    border-right: 20px solid #1f2023;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+}
+
+/* El título que tiene Datos personales */
+
+.data-title {
+    background-color: #4d6d63;
+    color: #fff;
+    border-radius: 5px;
+    padding-inline-start: 10px;
+    box-sizing: content-box;
+    margin: 0px;
+    padding: 10px;
+}
+
+/* Contenedor que tiene fieldset - Cubre cada uno de los distintos forms desde inicio a fin, por cada título. Es decir, 1 fieldset por Datos Personales, otro fieldset por Datos de Contacto y otro por Actividades*/
+
+.personal-data-container {
+    border: solid 2px #4d6d63;
+    border-radius: 5px;
+    background-color: #d6e2de;
+    padding: 20px 30px;
+}
+
+/* Acá le sacamos el borde a fieldset; pero le dejamos el borde a su contenedor arriba*/
+fieldset {
+    border: none;
+}
+
+/* Este personal data le ponemos la propiedad display:flex y después que la dirección del flex sea en columna; para que todos los inputs queden por debajo de los labels, en columna. Esta clase afecta inmediatamente a sus descendientes (label e inputs)*/
+.personal-data {
+    text-align: center;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+}
+
+/* Este es el padding de los inputs y del label. Es de cualquier item que este dentro de personal-data*/
+.personal-data > * {
+    padding: 10px;
+}
+
+/* Este resize none es para que no se pueda editar el textarea en la página. El box-sizing es lo que hace que sea responsive el text-area con su contenedor*/
+textarea {
+    resize: none;
+    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+}
+
+label {
+    font-size: 1.2em;
+}
+
+legend {
+    position: relative;
+    top: -20px;
+}
+
+/* Puntos separadores entre cada uno*/
+.separador {
+    border-bottom: dotted 15px #d6e2de;
+    margin: 30px auto;
+    width: 35%;
+}
+
+/* Datos de Contacto */
+#datos-de-contacto-form input[type="number"]::placeholder {
+    text-align: right;
+    font-size: 1em;
+}
+#datos-de-contacto-form input[type="email"]::placeholder {
+    text-align: right;
+    font-size: 1em;
+}
+
+/* Actividades -> Este contenedor tiene casi lo mismo que personal-data pero tiene menos padding; por eso lo separé */
+
+.actividades-container {
+    padding: 10px 30px;
+    border: solid 2px #4d6d63;
+    border-radius: 5px;
+    background-color: #d6e2de;
+}
+
+/* Este es el margin entre los títulos de Sede Palermo y Sede Rosario para que queden separados de los inputs*/
+.sedes-label {
+    margin-bottom: 25px;
+}
+
+.sedes-margin {
+    margin-bottom: 25px;
+}
+
+/* Condiciones */
+.tos-news {
+    margin-top: 25px;
+    color: white;
+}
+
+.checkbox-margin {
+    margin-bottom: 10px;
+}
+
+/* Botones */
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    margin: 20px;
+    background-color: #2b3d37;
+    color: #a6c1b9;
+    border-radius: 5px;
+    border: 1px solid rgba(214, 226, 222, 0.2);
+    font-size: 1.2em;
+    font-family: "Roboto", sans-serif;
+    padding: 15px;
+}
+
+/* Hover y Focus para cambiar de color cuando se da click en los inputs*/
+
+.btn:hover {
+    background-color: #a6c1b9;
+    color: #2b3d37;
+}
+
+input:focus {
+    background-color: #4d6d63;
+}
+
+textarea:focus {
+    background-color: #4d6d63;
+}
+
+.personal-data-container:focus-within {
+    background-color: #a6c1b9;
+}
+
+.personal-data input {
+    text-align: right;
+    font-size: 1.4em;
+    color: black;
+}
+
+.personal-data input:focus {
+    color: white;
+}
+
+/* Para que no se vea el video de fondo de estilos-3*/
+.video-de-fondo {
+    display: none;
+}
