@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos-7.css">
     <title>Ejercicio 7</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
+    </style>
 </head>
 <body>
     <main>
-        <section>
+        <section class="section-activities">
             <header>
-                <h1>Recordatorios</h1>
-                <ul>
-                    <li>Lavar auto</li>
-                    <li>Planchar ropa</li>
-                    <li>Comprar huevos por que faltan</li>
-                    <li>Llevar los tuppers a destino</li>
-                    <li>Llenar las cubeteras de la heladera</li>
-                </ul>
-
-                <div>
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                </div>
+                <h1 class="section-activities__title">Recordatorios</h1>
             </header>
+            
+            <ul class="section-activities__list">
+                <li class="section-activities__list__item">Lavar auto</li>
+                <li class="section-activities__list__item">Planchar ropa</li>
+                <li class="section-activities__list__item">Comprar huevos por que faltan</li>
+                <li class="section-activities__list__item">Llevar los tuppers a destino</li>
+                <li class="section-activities__list__item">Llenar las cubeteras de la heladera</li>
+            </ul>
+
+            <div class="section-activities__image-container">
+                <img src="css/img/agregar.png" class="section-activities__image-container__image" alt="Agregar Recordatorio">
+                <img src="css/img/agregar-importante.png" class="section-activities__image-container__image" alt="Agregar Recordatorio Importante">
+                <img src="css/img/sacar-primero.png" class="section-activities__image-container__image" alt="Quitar Primer Recordatorio">
+                <img src="css/img/sacar-ultimo.png" class="section-activities__image-container__image" alt="Quitar Último Recordatorio">
+            </div>
+
         </section>
     </main>
     <script src="js/recordatorios.js"></script>
