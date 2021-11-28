@@ -1,4 +1,5 @@
-var container = document.createElement("div");       
+var container = document.createElement("div"); 
+container.innerHTML = "algo";      
 container.id='lenguajes-container'
 document.body.appendChild(container);  
 var i, j
@@ -21,7 +22,7 @@ var i, j
             case 0:
                 for(j=0;j<4;j++){
                     var parrafos = document.createElement("p")
-                    parrafos.innerHTML +='Lorem ipsum dolor sit amet consectetur adipisicing elit.Dolores officiis, facilis blanditiis dignissimos tempora corrupti assumenda voluptatibus mollitia veritatis impedit quis fugiat. Voluptatem enim ratione similique maiores unde harum dignissimos?'
+                    parrafos.innerHTML +=writeloremipsum()
                     document.getElementById("PHP").appendChild(parrafos); 
                     parrafos.style.fontSize='.7em'
                     parrafos.style.fontWeight='normal'
@@ -31,7 +32,7 @@ var i, j
             case 1:
                 for(j=0;j<4;j++){
                     var parrafos = document.createElement("p")
-                    parrafos.innerHTML +='Lorem ipsum dolor sit amet consectetur adipisicing elit.Dolores officiis, facilis blanditiis dignissimos tempora corrupti assumenda voluptatibus mollitia veritatis impedit quis fugiat. Voluptatem enim ratione similique maiores unde harum dignissimos?'
+                    parrafos.innerHTML +=writeloremipsum()
                     document.getElementById("Javascript").appendChild(parrafos);  
                     parrafos.style.fontSize='.7em'
                     parrafos.style.fontWeight='normal'
@@ -41,7 +42,7 @@ var i, j
             case 2:
                 for(j=0;j<4;j++){
                     var parrafos = document.createElement("p")
-                    parrafos.innerHTML +='Quaerat autem atque aliquid repudiandae, minima molestiae at ullam vel itaque est voluptatem possimus officia voluptatibus non rerum sint quia amet. Doloremque atque, id dolor quia quaerat laboriosam! Ea veniam enim suscipit! Eos quidem autem aliquid aliquam quae voluptates quis.'
+                    parrafos.innerHTML +=writeloremipsum()
                     document.getElementById("Java").appendChild(parrafos); 
                     parrafos.style.fontSize='.7em'
                     parrafos.style.fontWeight='normal'
@@ -50,7 +51,7 @@ var i, j
             case 3:
                 for(j=0;j<8;j++){
                     var parrafos = document.createElement("p")
-                    parrafos.innerHTML +='Sunt natus sapiente officia! Dignissimos aspernatur dolorem perspiciatis, voluptatum perferendis iure suscipit harum molestias commodi eaque porro cupiditate blanditiis quidem iste in placeat mollitia officia! Mollitia blanditiis qui vero quam.'
+                    parrafos.innerHTML +=writeloremipsum()
                     document.getElementById("C").appendChild(parrafos);
                     parrafos.style.fontSize='.7em'
                     parrafos.style.fontWeight='normal' 
@@ -60,7 +61,7 @@ var i, j
             case 4:
                 for(j=0;j<11;j++){
                     var parrafos = document.createElement("p")
-                    parrafos.innerHTML +='Pariatur, similique? Odio laborum modi quisquam veniam voluptate rerum, iure pariatur reiciendis nemo dicta suscipit, doloribus, temporibus voluptatem veritatis ipsa repellendus ab nulla nam dolores voluptatibus magni nesciunt animi. Repellat.'
+                    parrafos.innerHTML +=writeloremipsum()
                     document.getElementById("Python").appendChild(parrafos); 
                     parrafos.style.fontSize='.7em'
                     parrafos.style.fontWeight='normal' 
@@ -71,6 +72,17 @@ var i, j
                 break;
         }
 
+
     }
 
-        
+
+    function writeloremipsum(){
+        var lorem= []
+        var generador = ['Nostrum','ratione','consequuntur','architecto','pariatur','animi!','repudiandae','laborum','Blanditiis','accusamus'] 
+        for(var x=0;x < 50;x++){
+            var index= Math.floor((Math.random()* generador.length)+0);
+            lorem+=generador[index] + ' '
+        }
+        return lorem
+    }
+
