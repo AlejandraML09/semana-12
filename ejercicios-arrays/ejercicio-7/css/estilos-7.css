@@ -1,29 +1,42 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     height: 100%;
-    background: rgb(23,23,23);
-    background: -moz-linear-gradient(360deg, rgba(23,23,23,1) 0%, rgba(65,65,65,1) 100%);
-    background: -webkit-linear-gradient(360deg, rgba(23,23,23,1) 0%, rgba(65,65,65,1) 100%);
-    background: linear-gradient(360deg, rgba(23,23,23,1) 0%, rgba(65,65,65,1) 100%);
-    filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr="#171717",endColorstr="#414141",GradientType=1)";
+    background: rgb(23, 23, 23);
+    background: -moz-linear-gradient(
+        360deg,
+        rgba(23, 23, 23, 1) 0%,
+        rgba(65, 65, 65, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+        360deg,
+        rgba(23, 23, 23, 1) 0%,
+        rgba(65, 65, 65, 1) 100%
+    );
+    background: linear-gradient(
+        360deg,
+        rgba(23, 23, 23, 1) 0%,
+        rgba(65, 65, 65, 1) 100%
+    );
+    filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=" #171717
+        ",endColorstr=" #414141 ",GradientType=1)";
 }
 
-.section-activities__title{
+.section-activities__title {
     text-align: center;
     padding: 2rem;
     font-size: 3rem;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     color: white;
     font-weight: 300;
     text-shadow: 5px 5px 1px rgb(29, 29, 29);
 }
 
-.section-activities__list{
+.section-activities__list {
     width: 80%;
     max-width: 1000px;
     margin: 0 auto;
@@ -31,7 +44,7 @@ html{
     list-style-type: none;
     padding: 2rem;
     font-size: 1.5rem;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 200;
     line-height: 1.5;
     color: white;
@@ -48,17 +61,17 @@ html{
     border-radius: 10px;
 }
 
-.section-activities__image-container{
+.section-activities__image-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.section-activities__image-container__image{
+.section-activities__image-container__image {
     width: 250px;
-    transition: all .25s;
+    transition: all 0.25s;
 }
 
-.section-activities__image-container__image:hover{
+.section-activities__image-container__image:hover {
     transform: scale(1.05);
 }
