@@ -42,3 +42,25 @@
         }
     }
 }
+
+.toggle-button {
+    width:100px;
+    border-radius: 50px;
+    background-color:color(background-color);
+    height: 50px;
+    border: none;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+
+
+    &__inner {
+        height: 40px;
+        width:40px;
+        border-radius: 100%;
+        background-color: color(main-text-color);
+        margin:3px;
+                
+    }
+
+}
