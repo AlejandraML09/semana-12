@@ -67,11 +67,11 @@ html {
     justify-content: center;
 }
 
-.section-activities__image-container__image {
+.section-activities__image-container--image {
     width: 250px;
     transition: all 0.25s;
 }
 
-.section-activities__image-container__image:hover {
+.section-activities__image-container--image:hover {
     transform: scale(1.05);
 }

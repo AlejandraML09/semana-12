@@ -26,7 +26,7 @@ function agregarRecordatorioHtml(texto) {
 
 }
 
-var elementosClickleables = document.getElementsByClassName("section-activities__image-container__image")
+var elementosClickleables = document.getElementsByClassName("section-activities__image-container--image")
 
 
 /* Estás variables (Agregar Recordatorio y Recordatorio Prioritario) lo que hacen es modificar el array (recordatorios) con push o unshift. */
